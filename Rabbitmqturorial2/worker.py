@@ -3,6 +3,7 @@ import pika
 import time
 
 #ワーカー(Consumer)はアプリ自体である。
+#一つのキューからワーカーを二つ作るにはpython3 worker.pyを二回うつ
 connection = pika.BlockingConnection(
     pika.ConnectionParameters(host='localhost'))
 channel = connection.channel()
